@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2017 2:08:37 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="tvdt" name="Model.Isachnoi" optimistic-lock="version" table="isachnoi">
+    <id name="id" type="java.lang.Integer">
+      <column name="ID"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="Model.Bientap" fetch="select" name="bientap">
+      <column name="BienTap" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Tacgia" fetch="select" name="tacgia">
+      <column name="TacGia" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Theloaisach" fetch="select" name="theloaisach">
+      <column name="TheLoai" not-null="true"/>
+    </many-to-one>
+    <property name="ten" type="string">
+      <column length="65535" name="Ten" not-null="true"/>
+    </property>
+    <property name="anhBia" type="string">
+      <column length="65535" name="AnhBia" not-null="true"/>
+    </property>
+    <property name="tomTat" type="string">
+      <column length="65535" name="TomTat" not-null="true"/>
+    </property>
+    <property name="mucLuc" type="string">
+      <column length="65535" name="MucLuc" not-null="true"/>
+    </property>
+    <property name="nguoiDoc" type="int">
+      <column name="NguoiDoc" not-null="true"/>
+    </property>
+    <property name="linkDown" type="string">
+      <column length="65535" name="LinkDown" not-null="true"/>
+    </property>
+    <property name="ngayTao" type="date">
+      <column length="10" name="NgayTao" not-null="true"/>
+    </property>
+    <property name="ngayCapNhat" type="date">
+      <column length="10" name="NgayCapNhat" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="false" lazy="true" name="nguoidocs" table="rela_sach_nguoidoc">
+      <key>
+        <column name="ID_sach" not-null="true"/>
+      </key>
+      <many-to-many entity-name="Model.Nguoidoc">
+        <column name="id_nguoidoc" not-null="true"/>
+      </many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

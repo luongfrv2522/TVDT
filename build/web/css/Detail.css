@@ -1,0 +1,15 @@
+.right_content_detail{
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.right_detail{
+	float: right;
+	width: 70%;
+	line-height: inherit;
+}
+.right_content_detail img{
+	float: left;
+	width: 260px;
+	height: 390px;
+}

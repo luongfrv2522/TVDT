@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2017 2:08:37 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="tvdt" name="Model.Sachtruyenthong" optimistic-lock="version" table="sachtruyenthong">
+    <id name="id" type="java.lang.Integer">
+      <column name="ID"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="Model.Bientap" fetch="select" name="bientap">
+      <column name="BienTap" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Tacgia" fetch="select" name="tacgia">
+      <column name="TacGia" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Theloaisach" fetch="select" name="theloaisach">
+      <column name="TheLoai" not-null="true"/>
+    </many-to-one>
+    <property name="ten" type="string">
+      <column length="65535" name="Ten" not-null="true"/>
+    </property>
+    <property name="anhBia" type="string">
+      <column length="65535" name="AnhBia" not-null="true"/>
+    </property>
+    <property name="tomTat" type="string">
+      <column length="65535" name="TomTat" not-null="true"/>
+    </property>
+    <property name="trangThai" type="int">
+      <column name="TrangThai" not-null="true"/>
+    </property>
+    <property name="ngayXuatBan" type="date">
+      <column length="10" name="NgayXuatBan" not-null="true"/>
+    </property>
+    <property name="ngayTao" type="date">
+      <column length="10" name="NgayTao" not-null="true"/>
+    </property>
+    <property name="ngayCapNhat" type="date">
+      <column length="10" name="NgayCapNhat" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

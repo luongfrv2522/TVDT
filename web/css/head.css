@@ -1,0 +1,123 @@
+.imgWall{
+    text-align: center;
+}
+.imgWall img {
+    width: 1255px;
+    height: 280px;
+}
+.full_content {
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    margin-top: 10px;
+    text-align: center;
+    height: fit-content;
+    position: relative;
+    display: block;
+    float: left;
+}
+.left_content {
+    background-color: red;
+    width: 200px;
+    height: fit-content;
+    float: left;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.right_content {
+    background-color: yellowgreen;
+    width: 977px;
+    float: left;
+    display: block;
+    position: relative;
+    text-align: left;
+    margin-top: 10px;
+}
+a, a:visited, a:hover{
+	text-decoration: none !important;
+	color: black;
+}
+.panel-footer{
+	overflow: hidden;
+    clear: left;
+}
+#the_loai a {
+    display: block;
+    width: 100%;
+    background-color: aqua;
+    height: 28px;
+    padding-top: 5px;
+    border-bottom: 2px solid;
+    text-align: left;
+    padding-left: 5px;	
+}
+#the_loai a:hover{
+	background-color: blue;
+}   
+.filter_menu {
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.search_menu form{
+    display: -webkit-box;
+}
+.search_menu select{
+    width: 94px;
+    height: 26px;
+}
+.search_menu input{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.search_menu div{
+    display: inline-block;
+}
+.sort_menu{
+	position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 170px;
+}
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 5px;
+    display: none;
+}
+#panel div a{
+	border-bottom: 1px solid;
+    display: block;
+}
+.thumbnail {
+    width: 138px;
+    height: 242px;
+    display: inline-grid;
+    font-size: 11px;
+}
+.img-thumbnail {
+
+    margin-left: 10px;
+}
+.img-thumbnail img{
+    width: 100px;
+    height: 150px;
+}
+.list_item_content{
+	padding: 10px;
+	padding-left: 40px;
+}
+.list-group-item-heading {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 14px;
+    width: 98px;
+}

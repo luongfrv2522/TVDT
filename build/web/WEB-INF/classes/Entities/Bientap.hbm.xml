@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2017 2:08:37 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="tvdt" name="Model.Bientap" optimistic-lock="version" table="bientap">
+    <id name="id" type="java.lang.Integer">
+      <column name="ID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="ten" type="string">
+      <column length="65535" name="Ten" not-null="true"/>
+    </property>
+    <property name="ngaySinh" type="date">
+      <column length="10" name="NgaySinh" not-null="true"/>
+    </property>
+    <property name="gioiTinh" type="boolean">
+      <column name="GioiTinh" not-null="true"/>
+    </property>
+    <property name="sdt" type="long">
+      <column name="SDT" not-null="true"/>
+    </property>
+    <property name="nhanVienChinhThuc" type="boolean">
+      <column name="NhanVienChinhThuc" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="sachtruyenthongs" table="sachtruyenthong">
+      <key>
+        <column name="BienTap" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Sachtruyenthong"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="isachnois" table="isachnoi">
+      <key>
+        <column name="BienTap" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Isachnoi"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="isachchus" table="isachchu">
+      <key>
+        <column name="BienTap" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Isachchu"/>
+    </set>
+  </class>
+</hibernate-mapping>

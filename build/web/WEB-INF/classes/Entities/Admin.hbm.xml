@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2017 2:08:37 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Admin" table="admin" catalog="tvdt" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="65535" not-null="true" />
+        </property>
+        <property name="passWowd" type="string">
+            <column name="PassWowd" length="65535" not-null="true" />
+        </property>
+        <property name="sdt" type="long">
+            <column name="SDT" not-null="true" />
+        </property>
+        <property name="ten" type="string">
+            <column name="Ten" length="65535" not-null="true" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" not-null="true" />
+        </property>
+        <property name="gioiTinh" type="boolean">
+            <column name="GioiTinh" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
